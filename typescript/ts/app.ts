@@ -557,22 +557,22 @@
 // fn("hallo", console.log);
 
 /********** TS DOM **********/
-const FIRST_NUM = document.getElementById("first-num")! as HTMLInputElement;
-const SECOND_NUM = document.getElementById("second-num")! as HTMLInputElement;
-const BTN = document.getElementById("btn")! as HTMLButtonElement;
-const RESULT = document.getElementById("result")! as HTMLSpanElement;
+// const FIRST_NUM = document.getElementById("first-num")! as HTMLInputElement;
+// const SECOND_NUM = document.getElementById("second-num")! as HTMLInputElement;
+// const BTN = document.getElementById("btn")! as HTMLButtonElement;
+// const RESULT = document.getElementById("result")! as HTMLSpanElement;
 
-const sum = (firstNum: number, secondNum: number) => firstNum + secondNum;
+// const sum = (firstNum: number, secondNum: number) => firstNum + secondNum;
 
-const printNum = (firstNum: number, secondNum?: number) => {
-  if (secondNum) {
-    const sumOnNum = sum(firstNum, secondNum); // number
-    RESULT.innerHTML = `${sumOnNum}`;
-    return;
-  }
-  RESULT.innerHTML = String(firstNum);
-};
+// const printNum = (firstNum: number, secondNum?: number) => {
+//   if (secondNum) {
+//     const sumOnNum = sum(firstNum, secondNum); // number
+//     RESULT.innerHTML = `${sumOnNum}`;
+//     return;
+//   }
+//   RESULT.innerHTML = String(firstNum);
+// };
 
-BTN.addEventListener("click", () =>
-  printNum(+FIRST_NUM.value, +SECOND_NUM.value)
-);
+// BTN.addEventListener("click", () =>
+//   printNum(+FIRST_NUM.value, +SECOND_NUM.value)
+// );
