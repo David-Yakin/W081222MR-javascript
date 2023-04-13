@@ -180,18 +180,18 @@
 // getPromise();
 
 /*********** fetch function **********/
-const fetchData = async () => {
-  try {
-    const response = await fetch("./db/usersDb.json");
-    // console.log(response);
-    const data = await response.json();
-    console.log(data);
-  } catch (error) {
-    console.log(error.message);
-  }
-};
+// const fetchData = async () => {
+//   try {
+//     const response = await fetch("./db/usersDb.json");
+//     // console.log(response);
+//     const data = await response.json();
+//     console.log(data);
+//   } catch (error) {
+//     console.log(error.message);
+//   }
+// };
 
-fetchData();
+// fetchData();
 
 /***** Promise shortcut ******/
 // const resolve = Promise.resolve("in resolve");

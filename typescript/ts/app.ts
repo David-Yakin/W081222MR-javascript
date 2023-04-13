@@ -483,3 +483,96 @@
 // tuple.push(true);
 
 // const secondTuple: [string, number, boolean] = ["hello", 10, false];
+
+/********** functions **********/
+// const fn :Function = ()=>{}
+// const fn = () => {};
+// const fn: Function = (data: string) => data;
+// const fn = (data:string)=>data
+
+/********** function return **********/
+// const fn = (text: string): number => +text;
+// const fn = (text: string): number => Number(text);
+// const fn = (text: string): number => {
+//   return +text;
+// };
+
+// const fn = (text: string, num?: number): string => {
+//   if (!num) return text;
+//   return text + num;
+// };
+
+// const x = fn("hallo ", 5);
+
+// console.log(x);
+
+/********** function default **********/
+// const fn = (text: string, num: number = 1): string => text + num;
+
+/********** function return void **********/
+// const fn = (text: string | null): string | void | null => {
+//   if (text) return text;
+//   if (text === null) return null;
+// };
+
+// const x = fn("");
+// console.log(x);
+// const y = fn(null);
+// console.log(y);
+// const z = fn("hallo");
+// console.log(z);
+
+// const x = fn("x ");
+// console.log(x);
+
+// const y = fn("y ", 500);
+// console.log(y);
+
+// const z = fn("z ", false);
+// console.log(z);
+
+// const fn = (text: string) => +text;
+
+// const x = fn("5");
+
+// console.log(typeof x);
+
+/********** initial function **********/
+// let fn: (x: number) => number;
+
+// fn = data => {
+//     console.log(data);
+//     return data;
+// };
+
+// fn = num => num;
+
+// fn(5);
+
+/********** type initial  function **********/
+// type Demo = (data: string) => void;
+
+// const fn = (text: string, cb: Demo) => cb(text);
+
+// fn("hallo", console.log);
+
+/********** TS DOM **********/
+const FIRST_NUM = document.getElementById("first-num")! as HTMLInputElement;
+const SECOND_NUM = document.getElementById("second-num")! as HTMLInputElement;
+const BTN = document.getElementById("btn")! as HTMLButtonElement;
+const RESULT = document.getElementById("result")! as HTMLSpanElement;
+
+const sum = (firstNum: number, secondNum: number) => firstNum + secondNum;
+
+const printNum = (firstNum: number, secondNum?: number) => {
+  if (secondNum) {
+    const sumOnNum = sum(firstNum, secondNum); // number
+    RESULT.innerHTML = `${sumOnNum}`;
+    return;
+  }
+  RESULT.innerHTML = String(firstNum);
+};
+
+BTN.addEventListener("click", () =>
+  printNum(+FIRST_NUM.value, +SECOND_NUM.value)
+);
